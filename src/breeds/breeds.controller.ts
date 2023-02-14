@@ -22,9 +22,9 @@ export class BreedsController {
     return this.breedsService.findOne(name);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateBreedDto: UpdateBreedDto) {
-    return this.breedsService.update(+id, updateBreedDto);
+  @Patch(':name')
+  update(@Param('name') name: string, @Body() updateBreedDto: UpdateBreedDto) {
+    return this.breedsService.update(name, updateBreedDto);
   }
 
   @Delete(':id')

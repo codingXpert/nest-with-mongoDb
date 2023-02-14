@@ -21,8 +21,8 @@ export class BreedsService {
     return this.BreedModel.findOne({name});
   }
 
-  update(id: number, updateBreedDto: UpdateBreedDto) {
-    return `This action updates a #${id} breed`;
+  update(name: string, updateBreedDto: UpdateBreedDto) {
+    return this.BreedModel.updateOne({name} , {$set:{...updateBreedDto}});
   }
 
   remove(id: number) {
