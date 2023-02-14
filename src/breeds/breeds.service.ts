@@ -14,7 +14,7 @@ export class BreedsService {
   }
 
   findAll() {
-    return `This action returns all breeds`;
+    return this.BreedModel.find();
   }
 
   findOne(id: number) {
