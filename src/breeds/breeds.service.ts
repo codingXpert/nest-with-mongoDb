@@ -17,8 +17,8 @@ export class BreedsService {
     return this.BreedModel.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} breed`;
+  findOne(name: string) {
+    return this.BreedModel.findOne({name});
   }
 
   update(id: number, updateBreedDto: UpdateBreedDto) {

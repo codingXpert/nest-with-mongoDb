@@ -17,9 +17,9 @@ export class BreedsController {
     return this.breedsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.breedsService.findOne(+id);
+  @Get(':name')
+  findOne(@Param('name') name: string) {
+    return this.breedsService.findOne(name);
   }
 
   @Patch(':id')
