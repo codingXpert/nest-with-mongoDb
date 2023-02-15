@@ -1,0 +1,6 @@
+# DELETE 
+# https://localhost:3000/breeds/dog
+
+
+DELETE  http://localhost:3000/breeds/dog
+Content-Type: application/json

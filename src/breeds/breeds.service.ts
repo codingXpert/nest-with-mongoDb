@@ -25,7 +25,7 @@ export class BreedsService {
     return this.BreedModel.updateOne({name} , {$set:{...updateBreedDto}});
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} breed`;
+ async remove(name: string) {
+    return this.BreedModel.deleteOne({name});
   }
 }

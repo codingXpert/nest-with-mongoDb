@@ -27,8 +27,8 @@ export class BreedsController {
     return this.breedsService.update(name, updateBreedDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.breedsService.remove(+id);
+  @Delete(':name')
+  remove(@Param('name') name: string) {
+    return this.breedsService.remove(name);
   }
 }
